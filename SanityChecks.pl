@@ -14,6 +14,8 @@ use LWP::UserAgent;
 use HTTP::Request;
 use Digest::MD5;
 
+# To break out subs to separate files, see http://stackoverflow.com/a/1712165/428779
+
 use constant wbemFlagReturnImmediately => 0x10;
 use constant wbemFlagForwardOnly => 0x20;
 
