@@ -202,7 +202,7 @@ foreach my $server (@servers) {
 		#print "$server is not pingable.\n";
 		$message = $message . "\t$server is not pingable.\n";
 		$errors++;
-		last;
+		next;
 	} else {
 		# Carry On
 		#print "$server is pingable.\n";
@@ -213,7 +213,7 @@ foreach my $server (@servers) {
 		if (!$objWMI) {        # Thanks, Juan...
 			$message = $message . "\tWMI connection to $server failed.\n";
 			$errors++;
-			last;
+			next;
 		} else {	# ... Go On...
 			
 			#---Uptime---
